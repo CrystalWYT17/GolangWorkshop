@@ -7,4 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup golang sdk
-        # uses: 
+        uses: actions/setup-go@v4
+        with:
+          go-version: '^1.13.1'
+
+      - name: checkout source
+        uses: actions/checkout@v3
