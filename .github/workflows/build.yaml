@@ -15,10 +15,7 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: '>=1.17.0'
-          # cache-dependency-path: subdir/go.sum
-
-      - name: Install dependencies
-        run: go get .
+          cache-dependency-path: subdir/go.sum
 
       - name: checkout source
         uses: actions/checkout@v3
