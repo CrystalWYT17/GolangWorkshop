@@ -1,0 +1,23 @@
+name: building golang application
+on:
+  push:
+
+jobs:
+  golang_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: '17'
+
+      - name: setup golang
+        uses: actions/setup-go@v4
+        with:
+          go-version: '>=1.17.0'
+
+      - name: checkout source
+        uses: actions/checkout@v3
+
+      - name: list repo before build
+        run: ls -l /
