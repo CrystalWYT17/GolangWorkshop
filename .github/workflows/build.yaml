@@ -29,50 +29,50 @@ jobs:
         with:
           payload: | 
               {
-                "text": "GitHub Action build result: ",
-                "blocks": [
-                  {
-                    "type": "header",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "Test",
-                      "emoji": true
-                    }
-                  },
-                  {
-                    "type": "section",
-                    "fields": [
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Name:* WYT"
-                      },
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Email:* <gmail.com|dash6789fire@gmail.com>"
+                  "text": "GitHub Action build result: ",
+                  "blocks": [
+                    {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "Test",
+                        "emoji": true
                       }
-                    ]
-                  },
-                  {
-                    "type": "section",
-                    "fields": [
-                      {
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Name:* WYT"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Email:* <gmail.com|dash6789fire@gmail.com>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Matriculation:* abc123"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Repository:* https://github.com/CrystalWYT17/GolangWorkshop.git"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "text": {
                         "type": "mrkdwn",
-                        "text": "*Matriculation:* abc123"
-                      },
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Repository:* https://github.com/CrystalWYT17/GolangWorkshop.git"
+                        "text": "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
                       }
-                    ]
-                  },
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
                     }
-                  }
-                ]
+                  ]
               }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
