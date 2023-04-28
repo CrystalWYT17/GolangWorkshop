@@ -1,0 +1,10 @@
+name: building golang application
+on:
+  push:
+
+jobs:
+  golang_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup golang sdk
+        # uses: 
