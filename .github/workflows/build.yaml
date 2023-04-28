@@ -15,9 +15,13 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: '>=1.17.0'
+          cache-dependency-path: subdir/go.sum
 
       - name: checkout source
         uses: actions/checkout@v3
+
+      - name: Build App
+        run: go build -v
 
       - name: list repo before build
         run: ls -l /
