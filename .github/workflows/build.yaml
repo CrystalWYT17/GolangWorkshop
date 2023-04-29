@@ -10,6 +10,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '17'
+          cache: 'npm'
 
       - name: setup golang
         uses: actions/setup-go@v4
@@ -27,7 +28,6 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: | 
             {
               "text": "GitHub Action build result: ",
@@ -43,3 +43,7 @@ jobs:
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+      
+  # deploy:
+  #   - name: Deploy on Staging
