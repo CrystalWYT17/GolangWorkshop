@@ -6,13 +6,6 @@ jobs:
   golang_app:
     runs-on: ubuntu-latest
     steps:
-      - name: setup nodejs
-        uses: actions/setup-node@v3
-        with:
-          node-version: '17'
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-
       - name: setup golang
         uses: actions/setup-go@v4
         with:
