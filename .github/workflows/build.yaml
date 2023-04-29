@@ -27,12 +27,24 @@ jobs:
               "text": "GitHub Action build result: ",
               "blocks": [
                 {
-                  "type": "section",
+                  "type": "header",
                   "text": {
-                    "type": "mrkdwn",
-                    "text": "Hello World"
+                    "type": "plain_text",
+                    "text": "Test",
+                    "emoji": true
                   }
-                }
+                },
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Name:* WYT"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Email:* <gmail.com|dash6789fire@gmail.com>"
+                  }
+                ]
               ]
             }
         env:
