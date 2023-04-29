@@ -30,7 +30,7 @@ jobs:
                   "type": "header",
                   "text": {
                     "type": "plain_text",
-                    "text": "Test",
+                    "text": "DipSA 56 CI/CD Submission",
                     "emoji": true
                   }
                 },
