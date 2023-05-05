@@ -54,7 +54,7 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Email:* <gmail.com|dash6789fire@gmail.com>"
+                      "text": "*Email:* <gmail.com|${{ env.Email }}>"
                     }
                   ]
                 },
@@ -97,4 +97,5 @@ jobs:
           Matriculation: "A0269562R"
           Repository: "https://github.com/CrystalWYT17/GolangWorkshop.git"
           RailwayLink: "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
+          Email: "e1112945@u.nus.edu"
       
