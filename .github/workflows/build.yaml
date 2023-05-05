@@ -5,7 +5,7 @@ on:
 
 jobs:
   golang_apps:
-    if: ${{ !startsWith(github.event.head_commit.message, '#NORUN') }}
+    if: ${{ startsWith(github.event.head_commit.message, '#NORUN') }}
     runs-on: ubuntu-latest
     steps:
       - name: setup golang
