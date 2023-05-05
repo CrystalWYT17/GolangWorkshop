@@ -1,7 +1,7 @@
 name: building golang application
 on:
   push:
-    branches: 'release/v*.*'
+    branches: ['release/v*.*','!release/v*.*.*']
 
 jobs:
   golang_apps:
@@ -80,11 +80,11 @@ jobs:
                     "type": "button",
                     "text": {
                       "type": "plain_text",
-                      "text": "Click Me",
+                      "text": "Go",
                       "emoji": true
                     },
                     "value": "click_me_123",
-                    "url": ${{ env.RailwayLink }},
+                    "url": "${{ env.RailwayLink }}",
                     "action_id": "button-action"
                   }
                 }
