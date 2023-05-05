@@ -96,6 +96,6 @@ jobs:
           Name: "Wutt Yee Tun"
           Matriculation: "A0269562R"
           Repository: "https://github.com/CrystalWYT17/GolangWorkshop.git"
-          RailwayLink: "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
+          RailwayLink: "https://swanky-house-production.up.railway.app"
           Email: "e1112945@u.nus.edu"
       
