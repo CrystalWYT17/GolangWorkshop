@@ -66,7 +66,7 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Repository:* ${{ env.Repository }}"
+                      "text": "*Repository:* ${{ github.event.repository.html_url }}"
                     }
                   ]
                 },
@@ -95,7 +95,6 @@ jobs:
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
           Name: "Wutt Yee Tun"
           Matriculation: "A0269562R"
-          Repository: "https://github.com/CrystalWYT17/GolangWorkshop.git"
           RailwayLink: "https://swanky-house-production.up.railway.app"
           Email: "e1112945@u.nus.edu"
       # 
