@@ -1,12 +1,11 @@
 name: building golang application
 on:
   push:
+    branches: [ 'release/v[0-9].[0-9]' ]
 
 jobs:
   golang_apps:
-  #   if: contains(github.event.head_commit.message, '#NORUN')
     if: ${{ !startsWith(github.event.head_commit.message, '#NORUN') }}
-    # if: ${{ github.ref_name == 'release/v[0-9].[0-9]' }} 
     runs-on: ubuntu-latest
     steps:
       - name: setup golang
@@ -94,5 +93,3 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
       
-  # deploy:
-  #   - name: Deploy on Staging
