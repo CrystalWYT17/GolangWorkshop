@@ -1,9 +1,8 @@
 name: building golang application
 on:
   push:
-    branches: 'release/v*.*'
+    branches: ['release/v*.*','!release/v*.*.*']
 
-# change in master
 jobs:
   golang_apps:
     if: ${{ startsWith(github.event.head_commit.message, '#NORUN') != true }}
@@ -85,6 +84,7 @@ jobs:
                       "emoji": true
                     },
                     "value": "click_me_123",
+                    "url": "${{ env.RailwayLink }}",
                     "action_id": "button-action"
                   }
                 }
@@ -96,6 +96,6 @@ jobs:
           Name: "Wutt Yee Tun"
           Matriculation: "A0269562R"
           Repository: "https://github.com/CrystalWYT17/GolangWorkshop.git"
-          RailwayLink: "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
+          RailwayLink: "https://swanky-house-production.up.railway.app"
           Email: "e1112945@u.nus.edu"
       
