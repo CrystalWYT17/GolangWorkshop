@@ -1,7 +1,12 @@
 name: building golang application
 on:
+<<<<<<< HEAD
   push:
     branches: 'release/v*.*'
+=======
+  workflow_call:
+    branches: [ 'release/v[0-9].[0-9]' ]
+>>>>>>> c483fd5836a4072d02efc6958bdefb61c8908f4b
 
 jobs:
   golang_apps:
