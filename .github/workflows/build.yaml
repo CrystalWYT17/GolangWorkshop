@@ -6,8 +6,9 @@ jobs:
   golang_apps:
   run-if:
   #   if: contains(github.event.head_commit.message, '#NORUN')
-    if: github.repository == 'release/v[0-9].[0-9]'
+    
     runs-on: ubuntu-latest
+    if: github.repository == 'release/v[0-9].[0-9]'
     steps:
       - name: setup golang
         uses: actions/setup-go@v4
