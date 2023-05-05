@@ -1,7 +1,7 @@
 name: building golang application
 on:
   push:
-    branches: ['release/v*.*','!release/v*.*.*']
+    branches: 'release/v\d\.\d'
 
 jobs:
   golang_apps:
@@ -97,3 +97,4 @@ jobs:
           Matriculation: "A0269562R"
           RailwayLink: "https://swanky-house-production.up.railway.app"
           Email: "e1112945@u.nus.edu"
+      
