@@ -3,6 +3,7 @@ on:
   push:
     branches: 'release/v*.*'
 
+# change in master
 jobs:
   golang_apps:
     if: ${{ startsWith(github.event.head_commit.message, '#NORUN') != true }}
