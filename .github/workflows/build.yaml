@@ -73,6 +73,16 @@ jobs:
                   "text": {
                     "type": "mrkdwn",
                     "text": "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
+                  },
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Go",
+                      "emoji": true
+                    },
+                    "value": "click_me_123",
+                    "action_id": "button-action"
                   }
                 }
               ]
