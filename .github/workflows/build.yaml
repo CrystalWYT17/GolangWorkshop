@@ -84,6 +84,7 @@ jobs:
                       "emoji": true
                     },
                     "value": "click_me_123",
+                    "url": "${{ env.RailwayLink }}",
                     "action_id": "button-action"
                   }
                 }
