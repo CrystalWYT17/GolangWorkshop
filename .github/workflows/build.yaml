@@ -80,7 +80,7 @@ jobs:
                     "type": "button",
                     "text": {
                       "type": "plain_text",
-                      "text": "Go",
+                      "text": "Click Me",
                       "emoji": true
                     },
                     "value": "click_me_123",
