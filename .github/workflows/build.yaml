@@ -1,7 +1,7 @@
 name: building golang application
 on:
   push:
-    branches: 'release/v\\d\\.\\d'
+    branches: 'release/v\d\.\d'
 
 jobs:
   golang_apps:
