@@ -1,11 +1,11 @@
 name: building golang application
 on:
-  workflow_run:
+  push:
     branches: 'release/v*.*'
 
 jobs:
   golang_apps:
-    if: ${{ startsWith(github.event.head_commit.message, '#NORUN') }}
+    if: ${{ startsWith(github.event.head_commit.message, '#NORUN') != true }}
     runs-on: ubuntu-latest
     steps:
       - name: setup golang
