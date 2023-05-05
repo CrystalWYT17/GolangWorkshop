@@ -3,7 +3,7 @@ on:
   push:
     branches: 'release/v*.*'
 
-# test no run
+# change in master
 jobs:
   golang_apps:
     if: ${{ startsWith(github.event.head_commit.message, '#NORUN') != true }}
@@ -50,7 +50,7 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Name:* WYT"
+                      "text": "*Name:* ${{ env.Name }}"
                     },
                     {
                       "type": "mrkdwn",
@@ -63,11 +63,11 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Matriculation:* abc123"
+                      "text": "*Matriculation:* ${{ env.Matriculation }}"
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Repository:* https://github.com/CrystalWYT17/GolangWorkshop.git"
+                      "text": "*Repository:* ${{ env.Repository }}"
                     }
                   ]
                 },
@@ -75,7 +75,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
+                    "text": "${{ env.RailwayLink }}"
                   },
                   "accessory": {
                     "type": "button",
@@ -93,4 +93,8 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+          Name: "Wutt Yee Tun"
+          Matriculation: "A0269562R"
+          Repository: "https://github.com/CrystalWYT17/GolangWorkshop.git"
+          RailwayLink: "<https://swanky-house-production.up.railway.app|https://swanky-house-production.up.railway.app>"
       
